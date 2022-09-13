@@ -13,15 +13,17 @@ export default function Counter(props: CounterProps) {
       display: block;
     }`;
   const [count, setCount] = useState(props.start);
-  const [users, setUsers] = useState(5);
+  const [users, setUsers] = useState(25);
   const [connectors, setConnectors] = useState(10);
   const [freq, setFreq] = useState(365);
-  const cost = freq * connectors * 1.5;
+  const cost = ((count * 12) + (freq * connectors * 1.5)) * 1.2;
+  const credits = ((count * 12) + (freq * connectors * 1.5));
 
   return (
     <div class="gap-2 w-full">
       <style>{css}</style>
-      <p class="font-bold text-xl pb-2">Overall Cost: ${cost.toLocaleString('en-US')} per Year</p>
+      <p class="font-bold text-xl pb-2">Overall Cost: ${cost.toLocaleString('en-US')} per Year (incl. 20% markup)</p>
+      <p class="font-bold text-xl pb-2">Execution credits: {credits.toLocaleString('en-US')} per Year</p>
       <p class="font-bold text-xl">Rows: {count} Million</p>
       <Button onClick={() => setCount(count - 1)}>-1</Button>
       <Button onClick={() => setCount(count + 1)}>+1</Button>
