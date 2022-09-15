@@ -94,7 +94,7 @@ function LemonDrop() {
     <>
       <svg
         width="100"
-        height="200"
+        height="300"
         viewBox="0 0 100 300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
