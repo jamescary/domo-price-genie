@@ -22,24 +22,27 @@ export default function Counter(props: CounterProps) {
   return (
     <div class="gap-2 w-full">
       <style>{css}</style>
-      <p class="font-bold text-xl pb-2">Overall Cost: ${cost.toLocaleString('en-US')} per Year</p>
+      <p class="font-bold text-xl pb-2">
+        Overall Cost: ${cost.toLocaleString("en-US")} per Year
+      </p>
       {/* <p class="font-bold text-xl pb-2">Execution credits: {credits.toLocaleString('en-US')} per Year</p> */}
       <p class="font-bold text-xl">Rows: {count} Million</p>
+      <Button onClick={() => setCount(count - 5)}>-5</Button>
       <Button onClick={() => setCount(count - 1)}>-1</Button>
       <Button onClick={() => setCount(count + 1)}>+1</Button>
+      <Button onClick={() => setCount(count + 5)}>+5</Button>
       <p class="font-bold text-xl">Users: {users}</p>
       <div class="w-1/3">
-        <Slider
-          value={users}
-          onInput={(e) => setUsers((e.target as HTMLInputElement).value)}
-        >
-        </Slider>
+        <Button onClick={() => setUsers(users - 5)}>-5</Button>
+        <Button onClick={() => setUsers(users - 1)}>-1</Button>
+        <Button onClick={() => setUsers(users + 1)}>+1</Button>
+        <Button onClick={() => setUsers(users + 5)}>+5</Button>
         <p class="font-bold text-xl">Data Sources: {connectors}</p>
-        <Slider
-          value={connectors}
-          onInput={(e) => setConnectors((e.target as HTMLInputElement).value)}
-        >
-        </Slider>
+
+        <Button onClick={() => setConnectors(connectors - 5)}>-5</Button>
+        <Button onClick={() => setConnectors(connectors - 1)}>-1</Button>
+        <Button onClick={() => setConnectors(connectors + 1)}>+1</Button>
+        <Button onClick={() => setConnectors(connectors + 5)}>+5</Button>
       </div>
 
       <p class="font-bold text-xl">Reporting Frequency: {freq}</p>
@@ -72,6 +75,15 @@ export default function Counter(props: CounterProps) {
                 onClick={() => setFreq(8760)}
               >
                 Hourly
+              </a>
+            </li>
+            <li class="">
+              <a
+                class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                href="javascript:void(0)"
+                onClick={() => setFreq(2920)}
+              >
+                Hourly 9-5
               </a>
             </li>
             <li class="">
