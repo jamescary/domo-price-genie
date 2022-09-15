@@ -51,10 +51,12 @@ export default function Counter(props: CounterProps) {
 
       <p class="font-bold text-xl">Reporting Frequency: {freq}</p>
       <Button onClick={() => setFreq(35040)}>Every 15 Minutes</Button>
+      <Button onClick={() => setFreq(11680)}>Every 15 Mins 9-5</Button>
       <Button onClick={() => setFreq(8760)}>Hourly</Button>
       <Button onClick={() => setFreq(2920)}>Hourly 9-5</Button>
       <Button onClick={() => setFreq(730)}>Twice Daily</Button>
       <Button onClick={() => setFreq(365)}>Daily</Button>
+      <Button onClick={() => setFreq(156)}>MWF</Button>
       <Button onClick={() => setFreq(52)}>Weekly</Button>
     </div>
   );
