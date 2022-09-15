@@ -1,17 +1,23 @@
 import Counter from "../islands/Counter.tsx";
+import LemonDrop from "../islands/LemonDrop.tsx";
+
+function Hero() {
+  return (
+    <>
+      <section class="w-full flex justify-center items-center flex-col bg-green-300">
+        <LemonDrop />
+      </section>
+    </>
+  );
+}
 
 export default function Home() {
   return (
-    <div class="p-4 mx-auto max-w-screen-md">
-      <img
-        src="/logo.svg"
-        class="w-32 h-32"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      <p class="my-6">
-        Welcome to `domo price genie`.
-      </p>
-      <Counter start={3} />
-    </div>
+    <>
+    <Hero/>
+      <div class="p-4 mx-auto max-w-screen-md">
+        <Counter start={3} />
+      </div>
+    </>
   );
 }

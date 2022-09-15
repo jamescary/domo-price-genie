@@ -22,8 +22,8 @@ export default function Counter(props: CounterProps) {
   return (
     <div class="gap-2 w-full">
       <style>{css}</style>
-      <p class="font-bold text-xl pb-2">Overall Cost: ${cost.toLocaleString('en-US')} per Year (incl. 20% markup)</p>
-      <p class="font-bold text-xl pb-2">Execution credits: {credits.toLocaleString('en-US')} per Year</p>
+      <p class="font-bold text-xl pb-2">Overall Cost: ${cost.toLocaleString('en-US')} per Year</p>
+      {/* <p class="font-bold text-xl pb-2">Execution credits: {credits.toLocaleString('en-US')} per Year</p> */}
       <p class="font-bold text-xl">Rows: {count} Million</p>
       <Button onClick={() => setCount(count - 1)}>-1</Button>
       <Button onClick={() => setCount(count + 1)}>+1</Button>
