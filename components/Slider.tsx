@@ -12,7 +12,7 @@ export function Slider(props: JSX.HTMLAttributes<HTMLInputElement>) {
         max="100"
         value="25"
         class="range"
-        step="5"
+        step="1"
       />
       <div class="w-1/2 flex justify-between text-xs px-2">
         <span>|</span>
