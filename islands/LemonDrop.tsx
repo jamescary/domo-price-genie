@@ -94,7 +94,7 @@ function LemonDrop() {
     <>
       <svg
         width="100"
-        height="300"
+        height="200"
         viewBox="0 0 100 300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -103,9 +103,9 @@ function LemonDrop() {
         aria-label="Fresh logo"
       >
         <circle cx="18" cy={dropy} r="4" fill="white"></circle>
-        <text x="15" y="105" fill="#0A140C">DOMO</text>
-        <text x="25" y="125" fill="#0A140C">PRICE</text>
-        <text x="35" y="145" fill="#0A140C">GENIE</text>
+        <text x="25" y="105" fill="#0A140C">DOMO</text>
+        <text x="35" y="125" fill="#0A140C">PRICE</text>
+        <text x="45" y="145" fill="#0A140C">GENIE</text>
         <path
           d="M84 16c13 27 1 52-7 59 0 4-9 9-12 7-12 5-38-2-53-21-6-7 1-21 21-36 13-10 33-17 51-9Z"
           fill="#FFD80B"
